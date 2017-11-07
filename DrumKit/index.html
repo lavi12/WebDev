@@ -57,8 +57,7 @@
   	<audio data-key="76" src="sounds/tink.wav"></audio>
 
   	<script>
-  		window.addEventListener('keydown',function(keyObj){
-  			//Let's see if we have an audio with the key that is pressed.
+  		function playSound(keyObj){
   			const audio = document.querySelector(`audio[data-key="${keyObj.keyCode}"]`);
   			//play the audio
   			if(!audio){
@@ -72,7 +71,7 @@
   			const key = document.querySelector(`.key[data-key="${keyObj.keyCode}"]`);
   			//console.log(key);
   			key.classList.add('playingKey');
-  		});
+  		}
 
   		//create a transitionend event to listen when the boder color change is complete - to bring back the border to its original color
   		const keys = document.querySelectorAll('.key');
@@ -86,6 +85,9 @@
   		keys.forEach(function(key){
   			key.addEventListener('transitionend',removeTransition);
   		});
+
+  		window.addEventListener('keydown',playSound);
+
 
   	</script>
 </body>
