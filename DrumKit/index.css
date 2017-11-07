@@ -25,7 +25,7 @@ html,body
   height: 5rem;
   font-size: 1.5rem;
   text-align: center;
-
+  transition: all 0.5s;
 }
 
 kbd {
@@ -38,4 +38,10 @@ kbd {
   text-transform: uppercase;
   letter-spacing: .1rem;
   color: #ffc600;
+}
+
+.playingKey{
+  transform: scale(1.1);
+  border-color: #ffc600;
+  box-shadow: 0 0 1rem #ffc600;
 }
