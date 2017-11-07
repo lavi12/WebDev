@@ -70,8 +70,23 @@
 
   			//highlight the playing key
   			const key = document.querySelector(`.key[data-key="${keyObj.keyCode}"]`);
-  			console.log(key);
+  			//console.log(key);
+  			key.classList.add('playingKey');
   		});
+
+  		//create a transitionend event to listen when the boder color change is complete - to bring back the border to its original color
+  		const keys = document.querySelectorAll('.key');
+  		function removeTransition(event){
+  			// console.log(event);  will return 6 different events that end
+  			if(event.propertyName!== 'transform') return;
+  			//console.log(event.propertyName);
+  			this.classList.remove('playingKey');
+
+  		}
+  		keys.forEach(function(key){
+  			key.addEventListener('transitionend',removeTransition);
+  		});
+
   	</script>
 </body>
 </html>

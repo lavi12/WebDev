@@ -25,7 +25,7 @@ html,body
   height: 5rem;
   font-size: 1.5rem;
   text-align: center;
-  transition: all 0.5s;
+  transition: all 0.09s;
 }
 
 kbd {
