@@ -1,0 +1,41 @@
+html,body 
+{ 
+  height: 100%; 
+}
+
+.container
+{
+  display: -webkit-flex;
+  display: flex;
+  flex-flow: row wrap;
+  margin: auto;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+  min-height: 100vh; /* this line puts it in middle of the page */
+}
+
+.key
+{
+  background-color: #f3f2ef;
+  border-radius: 2rem;
+  width: 5rem;
+  margin: 1rem;
+  height: 5rem;
+  font-size: 1.5rem;
+  text-align: center;
+
+}
+
+kbd {
+  display: block;
+  font-size: 2.5rem;
+}
+
+.sound {
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: .1rem;
+  color: #ffc600;
+}
