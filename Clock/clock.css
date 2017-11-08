@@ -36,7 +36,20 @@ html, body{
 	transform: translateY(-3px); /*account for the height of the clock hands */
 }
 
-.hand {
+.hand-hour {
+	width:30%;
+	height:6px;
+	background:black;
+	position: absolute;
+	left: 20%;
+	top:50%;
+	transform-origin: 100%; /* to change center of origin to left corner of the hand, from the mid of the hand  */
+	transform: rotate(90deg); /* set hands to 12 at begining */
+	transition: all 0.05s; /* for animation effect */
+	transition-timing-function: ease;
+}
+
+.hand-min {
 	width:50%;
 	height:6px;
 	background:black;
@@ -48,6 +61,17 @@ html, body{
 	transition-timing-function: ease;
 }
 
+.hand-sec {
+	width:50%;
+	height:2px;
+	background:black;
+	position: absolute;
+	top:50%;
+	transform-origin: 100%; /* to change center of origin to left corner of the hand, from the mid of the hand  */
+	transform: rotate(90deg); /* set hands to 12 at begining */
+	transition: all 0.05s; /* for animation effect */
+	transition-timing-function: ease;
+}
 .circle {
 	background: black;
 	position: absolute;
