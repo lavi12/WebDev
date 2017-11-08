@@ -7,6 +7,16 @@ html, body{
 	background: linear-gradient(45deg, #085078 15%, #85d8ce 90%);
 }
 
+p {
+	color: white;
+	font-size: x-large;
+	position: absolute;
+	top: 110%;
+	left: 40%;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+}
 
 .container
 {
@@ -72,6 +82,7 @@ html, body{
 	transition: all 0.05s; /* for animation effect */
 	transition-timing-function: ease;
 }
+
 .circle {
 	background: black;
 	position: absolute;

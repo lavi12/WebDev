@@ -15,6 +15,9 @@
 				<div class="hand-sec second-hand"></div>
 				<div class="circle"></div>
 			</div>
+			<div class="time">
+				<p class="timePlaceHolder"></p>
+			</div>
 		</div>
 	</div>
 
@@ -23,6 +26,7 @@
 		const secHand = document.querySelector(".second-hand");
 		const minHand = document.querySelector(".min-hand");
 		const hrHand = document.querySelector(".hour-hand");
+		const timeHolder = document.querySelector(".timePlaceHolder");
 
 		function setDate(){
 			const todayDate = new Date();
@@ -47,6 +51,11 @@
 		
 			if (minDegree === 90) minHand.style.transition = 'all 0s';
 			else minHand.style.transition = 'all 0.1s';
+
+			//write time below the clock
+			//console.log(`${timeHolder}`);
+			var sec = seconds<10 ? '0' + seconds: String(seconds);
+			timeHolder.innerHTML = `${hour}:${minutes}:${sec}`;
 		}
 		setInterval(setDate,1000);
 	</script>
