@@ -1,0 +1,45 @@
+html, body{
+	overflow: visible !important;
+	background: -webkit-linear-gradient(45deg, #085078 10%, #85d8ce 90%);
+	background: -moz-linear-gradient(45deg, #085078 10%, #85d8ce 90%);
+	background: -ms-linear-gradient(45deg, #085078 10%, #85d8ce 90%);
+	background: -o-linear-gradient(45deg, #085078 10%, #85d8ce 90%);
+	background: linear-gradient(45deg, #085078 10%, #85d8ce 90%);
+}
+
+
+.container
+{
+  display: flex;
+  flex-flow: row wrap;
+  -webkit-align-items: center;
+  -webkit-justify-content: center;
+  /*min-height: 100vh;*/
+}
+
+.clock
+{
+	width: 20rem;
+    height: 20rem;
+    border:10px solid white;
+    border-radius:50%;
+    margin:40px auto;
+    position: relative;
+    padding:2rem;
+    
+}
+
+.clock-face {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	/* transform: translateY(-3px); account for the height of the clock hands */
+}
+
+.hand {
+	width:50%;
+	height:6px;
+	background:black;
+	position: absolute;
+	top:50%;
+}
