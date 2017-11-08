@@ -55,7 +55,9 @@
 			//write time below the clock
 			//console.log(`${timeHolder}`);
 			var sec = seconds<10 ? '0' + seconds: String(seconds);
-			timeHolder.innerHTML = `${hour}:${minutes}:${sec}`;
+            var mi = minutes<10 ? '0' + minutes: String(minutes);
+            var hr = hour<10 ? '0' + hour: String(hour);
+			timeHolder.innerHTML = `${hr}:${mi}:${sec}`;
 		}
 		setInterval(setDate,1000);
 	</script>
