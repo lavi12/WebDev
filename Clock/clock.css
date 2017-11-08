@@ -33,7 +33,7 @@ html, body{
 	position: relative;
 	width: 100%;
 	height: 100%;
-	/* transform: translateY(-3px); account for the height of the clock hands */
+	transform: translateY(-3px); /*account for the height of the clock hands */
 }
 
 .hand {
@@ -45,5 +45,16 @@ html, body{
 	transform-origin: 100%; /* to change center of origin to left corner of the hand, from the mid of the hand  */
 	transform: rotate(90deg); /* set hands to 12 at begining */
 	transition: all 0.05s; /* for animation effect */
+	transition-timing-function: ease;
+}
+
+.circle {
+	background: black;
+	position: absolute;
+	top: 48%;
+	left: 48%;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
 
 }
