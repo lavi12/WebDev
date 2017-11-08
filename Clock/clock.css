@@ -1,10 +1,10 @@
 html, body{
-	overflow: visible !important;
-	background: -webkit-linear-gradient(45deg, #085078 10%, #85d8ce 90%);
-	background: -moz-linear-gradient(45deg, #085078 10%, #85d8ce 90%);
-	background: -ms-linear-gradient(45deg, #085078 10%, #85d8ce 90%);
-	background: -o-linear-gradient(45deg, #085078 10%, #85d8ce 90%);
-	background: linear-gradient(45deg, #085078 10%, #85d8ce 90%);
+	overflow: visible;
+	background: -webkit-linear-gradient(45deg, #085078 15%, #85d8ce 90%);
+	background: -moz-linear-gradient(45deg, #085078 15%, #85d8ce 90%);
+	background: -ms-linear-gradient(45deg, #085078 15%, #85d8ce 90%);
+	background: -o-linear-gradient(45deg, #085078 15%, #85d8ce 90%);
+	background: linear-gradient(45deg, #085078 15%, #85d8ce 90%);
 }
 
 
@@ -42,4 +42,8 @@ html, body{
 	background:black;
 	position: absolute;
 	top:50%;
+	transform-origin: 100%; /* to change center of origin to left corner of the hand, from the mid of the hand  */
+	transform: rotate(90deg); /* set hands to 12 at begining */
+	transition: all 0.05s; /* for animation effect */
+
 }
