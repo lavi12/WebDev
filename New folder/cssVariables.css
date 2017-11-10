@@ -1,0 +1,39 @@
+:root{
+    --basecolor: #FF0000;
+    --spacing: 10px;
+    --blur: 10px;
+}
+
+.container
+{
+    display: flex;
+    flex-flow: row wrap;
+    margin: 25px;
+    -webkit-align-items: center;
+    -webkit-justify-content: center;
+
+}
+
+body {
+    text-align: center;
+    background: #193549;
+    color: white;
+    font-weight: 100;
+    font-size: 30px;
+}
+
+input {
+    width: 100px;
+    margin-bottom: 15px;
+}
+
+label {
+    margin-bottom: 15px;
+}
+
+
+img {
+    padding: var(--spacing);
+    background: var(--basecolor);
+    filter: blur(var(--blur));
+}
