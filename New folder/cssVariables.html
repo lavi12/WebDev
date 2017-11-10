@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Playing with Variables</title>
+	<link rel="stylesheet" type="text/css" href="cssVariables.css">
+</head>
+<body>
+	<div class="container">
+	    <label for="spacing"> Spacing:</label>
+	    <input type="range" id="spacing" name="spacing" min="10" max="200" value="10" data-sizing="px">
+	    
+	    <label for="blur">Blur:</label>
+	    <input type="range" id="blur" name="blur" min="0" max="25" value="10" data-sizing="px">
+	    
+	    <label for="base">Base Color:</label>
+	    <input id="base" type="color" name="basecolor" value="#FF0000"> 
+	    
+	    <img src="/img/landscape.png" alt="landscape image">
+	</div>
+	
+	<script>
+        const inputs = document.querySelectorAll(".container input");
+        
+        function handleUpdate(){
+            //console.log(this.value);
+            const suffix = this.dataset.sizing || '';
+            document.documentElement.style.setProperty(`--${this.name}`, this.value + suffix);
+        }
+        
+        inputs.forEach(addEV);
+        function addEV(input){
+            input.addEventListener("change",handleUpdate);
+            input.addEventListener("mousemove", handleUpdate);
+        }
+    </script>
+	
+
+</body>
+</html>
